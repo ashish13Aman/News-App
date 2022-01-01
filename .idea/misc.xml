@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/work/RecycleView/app/src/main/res/layout/activity_details.xml" value="0.536" />
+        <entry key="..\:/work/RecycleView/app/src/main/res/layout/activity_details.xml" value="0.4" />
         <entry key="..\:/work/RecycleView/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
-        <entry key="..\:/work/RecycleView/app/src/main/res/layout/headline_list_items.xml" value="0.1" />
+        <entry key="..\:/work/RecycleView/app/src/main/res/layout/headline_list_items.xml" value="0.6" />
         <entry key="..\:/work/RecycleView/app/src/main/res/layout/row.xml" value="0.16666666666666666" />
       </map>
     </option>
