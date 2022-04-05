@@ -1,86 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+     android:background="@drawable/backgroud2">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_margin="14dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="25dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view"
+            android:elevation="8dp"
+            app:searchIcon="@drawable/searchicon2"
+            android:layout_width="match_parent"
+
+            android:layout_height="?attr/actionBarSize"
+            app:defaultQueryHint=" Search News...."
+            app:iconifiedByDefault="false">
+
+        </androidx.appcompat.widget.SearchView>
+
+    </androidx.cardview.widget.CardView>
+
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_1"
-            android:text="business"
-            android:textSize="12sp"
-            android:padding="6dp"
-            android:layout_margin="6dp">
 
-            </Button>
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/btn_2"
-                android:text="entertainment"
-                android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
 
-            </Button>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
                 android:text="general"
                 android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
+                android:textStyle="bold">
 
             </Button>
+
             <Button
+                android:id="@+id/btn_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
+                android:text="business"
+                android:textSize="12sp"
+                android:textStyle="bold">
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
+                android:text="entertainment"
+                android:textSize="12sp"
+                android:textStyle="bold">
+
+            </Button>
+
+            <Button
                 android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
                 android:text="health"
                 android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
+                android:textStyle="bold">
 
             </Button>
+
             <Button
+                android:id="@+id/btn_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_5"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
                 android:text="science"
                 android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
+                android:textStyle="bold">
 
             </Button>
+
             <Button
+                android:id="@+id/btn_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_6"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
                 android:text="sports"
                 android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
+                android:textStyle="bold">
 
             </Button>
+
             <Button
+                android:id="@+id/btn_7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/btn_7"
+                android:layout_margin="6dp"
+                android:background="@drawable/mybutton"
+                android:fontFamily="@font/allan"
+                android:padding="6dp"
                 android:text="technology"
                 android:textSize="12sp"
-                android:padding="6dp"
-                android:layout_margin="6dp">
+                android:textStyle="bold">
 
             </Button>
 
@@ -88,25 +144,33 @@
 
     </HorizontalScrollView>
 
+
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="14dp"
-        android:elevation="8dp">
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
-            app:defaultQueryHint=" Search News...."
-            app:iconifiedByDefault="false"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
+        >
 
-        </androidx.appcompat.widget.SearchView>
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            app:adSize="BANNER"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
     </androidx.cardview.widget.CardView>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_main"
-        android:layout_margin="8dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="8dp" />
+
+
+
+
+
 </LinearLayout>

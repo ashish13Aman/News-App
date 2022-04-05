@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/backgroud2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,13 +26,15 @@
                     android:layout_margin="6dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:id="@+id/text_detail_title"
-                        android:textColor="@color/black"
-                        android:textStyle="bold"
-                        android:textSize="26sp"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/amaranth"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        android:textStyle="bold">
 
                     </TextView>
                     <ImageView
@@ -43,11 +46,13 @@
                         android:layout_height="250dp">
 
                     </ImageView>
+
                     <TextView
+                        android:id="@+id/text_detail_author"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/text_detail_author"
                         android:layout_marginTop="6dp"
+                        android:fontFamily="sans-serif"
                         android:textColor="@color/purple_500"
                         android:textSize="16sp">
 
@@ -63,35 +68,67 @@
                     </TextView>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <TextView
-                android:id="@+id/text_detail_detail"
-                android:textSize="22sp"
-                android:textStyle="normal"
-                android:textColor="@color/black"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-                android:id="@+id/text_detail_detail_content"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                android:textColor="#615858"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </TextView>
-            <TextView
-                android:id="@+id/hyper_link"
-                android:textColor="@color/purple_700"
-                android:textStyle="bold"
+            <androidx.cardview.widget.CardView
+                android:elevation="8dp"
+                android:layout_margin="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="   \n\n            To view full article click here\n\n">
+                app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_detail_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/amaranth"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="normal">
 
             </TextView>
+
+            <TextView
+                android:id="@+id/text_detail_detail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/amaranth"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/hyper_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="             'To view full article click here'\n\n"
+                android:textColor="@color/purple_700"
+                android:textSize="15sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
 
